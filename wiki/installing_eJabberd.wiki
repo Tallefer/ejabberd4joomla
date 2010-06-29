@@ -7,7 +7,7 @@ You first need to install the native [https://support.process-one.net/doc/displa
 
 {{{ svn co https://svn.process-one.net/ejabberd-modules/mysql/trunk mysql }}}
 
-There is some precompiled Erlang beam files but there's not up-to-date : [mysql_beam.tar.gz. https://support.process-one.net/doc/download/attachments/415/mysql_beam.tar.gz]
+There is some precompiled Erlang beam files but there's not up-to-date : [https://support.process-one.net/doc/download/attachments/415/mysql_beam.tar.gz mysql_beam.tar.gz.]
 
 You need to put the MySQL .beam files somewhere in your Erlang path (possibly with your ejabberd *_italics_.beam* files):
 
