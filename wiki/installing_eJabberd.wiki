@@ -68,7 +68,7 @@ Query OK, 1 row affected (0.00 sec)
 {{{
 > wget https://git.process-one.net/ejabberd/mainline/blobs/raw/2.1.x/src/odbc/mysql.sql
 }}}
- * Import ejabberd database schema into the ejabberd database:
+ * Import ejabberd database schema into the joomla database:
 
 {{{
 > mysql -D joomla -h localhost -p -u joomla -S /var/lib/mysql/mysql.sock < mysql.sql
@@ -77,7 +77,7 @@ Query OK, 1 row affected (0.00 sec)
  * Check that the database structure has been correctly created:
 
 {{{
-> echo "show tables;" | mysql -D ejabberd -h localhost -p -u ejabberd -S /var/lib/mysql/mysql.sock
+> echo "show tables;" | mysql -D joomla -h localhost -p -u joomla -S /var/lib/mysql/mysql.sock
 Tables_in_ejabberd
 last
 rostergroups
