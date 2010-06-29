@@ -45,7 +45,7 @@ Your MySQL connection id is 2 to server version: 4.1.16-max
 
 Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
 
-mysql> bye;
+mysql> GRANT ALL ON joomla.* TO 'joomla'@'localhost' IDENTIFIED BY 'password';
 }}}
 
  * Create a new database 'joomla':
@@ -124,7 +124,7 @@ git checkout -b 2.1.x origin/2.1.x
 
 {{{
 {auth_method, odbc}.
-{odbc_server, {mysql, "localhost", "ejabberd", "ejabberd", "password"}}.
+{odbc_server, {mysql, "localhost", "joomla", "joomla", "password"}}.
 }}}
  Note: The MySQL configuration description is of the following form:
 
