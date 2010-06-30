@@ -138,3 +138,30 @@ When you have done that user accounts are stored in MySQL. You can define extra 
  * Change mod_offline to mod_offline_odbc to store offline messages in MySQL.
  * Change mod_roster to mod_roster_odbc to store contact lists in MySQL.
  * Change mod_vcard to mod_vcard_odbc to store user description in MySQL.
+
+==Disabling self registration in eJabberd==
+
+ * edit the ejabberd.cfg file and comment out {access, register, [{allow, all}]} finally this should look like:
+
+{{{
+  % Every username can be registered via in-band registration:
+  %{access, register, [{allow, all}]}.
+
+  % None username can be registered via in-band registration:
+  {access, register, [{deny, all}]}.
+ }}}
+
+ * Also comment out the mod_register module in the same file, it should look like this:
+
+{{{
+
+% Used modules:
+  {modules,
+   [
+    {mod_announce,   [{access, announce}]},
+   %% {mod_register,   [{access, register}]},
+   ]}.
+
+}}}
+
+For any more changes or addition please give comments.
